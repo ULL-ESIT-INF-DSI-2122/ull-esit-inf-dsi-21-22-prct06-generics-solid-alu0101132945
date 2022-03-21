@@ -1,0 +1,7 @@
+{
+    "entryPoints": [
+      "./src/ejercicio-PE103.ts"
+
+    ],
+    "out": "./docs"
+}
