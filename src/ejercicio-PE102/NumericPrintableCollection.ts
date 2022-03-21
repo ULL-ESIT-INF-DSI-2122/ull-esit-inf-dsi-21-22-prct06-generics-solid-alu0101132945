@@ -5,9 +5,13 @@ export class NumericPrintableCollection extends PrintableCollection{
         super(col)    
     }
     print():string{
-        let result
+        let result = ""
         this.collect.forEach(num => {
-            
+            result += num
+            if(this.collect.indexOf(num) != this.collect.length-1){
+                result += ',' 
+            }
         });
+        return result
     }
 }
