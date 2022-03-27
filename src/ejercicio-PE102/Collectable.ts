@@ -1,7 +1,7 @@
-export interface Collectable{
-    collect: any[]
-    addItem(item:any):void;
-    getItem(item:any):any;
-    removeItem(item:any):void
+export interface Collectable<T>{
+    collect: Array<T>
+    addItem(item:T):void;
+    getItem(item:T):T;
+    removeItem(item:T):void;
     getNumberofItems():number;
 }
