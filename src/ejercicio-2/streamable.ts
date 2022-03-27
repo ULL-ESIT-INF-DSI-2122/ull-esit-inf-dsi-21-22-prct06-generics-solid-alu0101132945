@@ -1,18 +1,16 @@
-export interface Streamable{
-    name:String;
-    fSal:Date;
-    durat: number;
-    director: string;
-    rate:string;
-    // episode:number;
-    // numeps:number;
-    // season:number;
-    // numSea:number;
-    getName():string;
-    getFSal():Date;
-    getDurat():number;
-    getDirector():string;
-    getRate():string;
-    // getEpisode():string;
-    // getSeason():string;
+import { Audiovisual } from "./audiovisual";
+
+export interface StreamableSearch{
+    searchNam(name:string):Audiovisual|undefined;
+    searchGenre(genre:string):Audiovisual|undefined;
+    searchDir(director:string):Audiovisual|undefined;
+    searchRate(rate:number):Audiovisual|undefined;
+    searchDur(duration:number):Audiovisual|undefined;
+    searchNumEp(numeps:number):Audiovisual|undefined;
+    searchNumSe(numSe:number):Audiovisual|undefined;
+}
+
+export interface StreamablePrint{
+    printAudiovisual(av:Audiovisual):void;
+    print():void;
 }
